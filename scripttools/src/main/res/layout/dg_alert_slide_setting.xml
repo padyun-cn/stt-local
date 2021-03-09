@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_v2_common_round_corner_small">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="26dp"
+            android:text="设置滑动说明"
+            android:textColor="#ffd1242b"
+            android:textSize="17sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="17dp"
+            android:text="@string/string_alert_slide_setting"
+            android:textColor="#ff28282c"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            />
+
+        <LinearLayout
+            android:id="@+id/checkbox_layout"
+            android:layout_width="0dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toLeftOf="@id/tips"
+            app:layout_constraintRight_toRightOf="@id/tips"
+            app:layout_constraintTop_toBottomOf="@id/tips">
+
+            <View
+                android:id="@+id/checkbox"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/ic_check_false"
+                />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不再提示"
+                android:textColor="#ff8c8d8d"
+                android:textSize="12sp"
+                android:layout_marginStart="3dp"
+                tools:ignore="HardcodedText"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/button_confirm"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="我知道了"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="#ff1e79e5"
+            android:textSize="14sp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

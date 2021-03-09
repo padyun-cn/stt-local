@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="dimen_core_default_dot_size">4</integer>
+    <dimen name="dimen_common_corner_radius_small">2dp</dimen>
+</resources>

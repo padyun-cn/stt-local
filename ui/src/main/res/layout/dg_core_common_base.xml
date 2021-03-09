@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#7f000000"
+    >
+
+    <LinearLayout
+        android:id="@+id/bg"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_dg_common_base"
+        android:orientation="vertical">
+
+        <!--title-->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25.5dp"
+            android:textColor="#0387ff"
+            android:textSize="16sp"
+            tools:text="温馨提示"
+            android:visibility="gone"
+            />
+
+        <View
+            android:id="@+id/divider_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:visibility="gone"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="15.5dp"
+            android:background="#0387ff"/>
+
+        <!--messge-->
+        <TextView
+            android:id="@+id/msg"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:textColor="#222222"
+            android:textSize="14sp"
+            android:visibility="gone"
+            tools:text="您可生成邀请码参与分享赚钱活动！"
+            />
+
+        <!--content-->
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#EDEDED"
+            />
+
+        <!--buttons-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp">
+
+            <TextView
+                android:id="@+id/natural"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_v2_dg_button_natural"
+                android:gravity="center"
+                android:textColor="#0387ff"
+                android:textSize="14sp"
+                android:visibility="visible"
+                tools:text="知道了"/>
+
+            <LinearLayout
+                android:id="@+id/button_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/negative"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_v2_dg_button_negative"
+                    android:gravity="center"
+                    android:textColor="#999"
+                    android:textSize="14sp"
+                    tools:text="忽略"/>
+
+                <View
+                    android:id="@+id/divider_line_inner_natural"
+                    android:visibility="gone"
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#ccc"
+                    />
+
+                <TextView
+                    android:id="@+id/inner_natural"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_v2_dg_button_inner_natural"
+                    android:gravity="center"
+                    android:textColor="#0387ff"
+                    android:visibility="gone"
+                    android:textSize="14sp"
+                    tools:text="知道了"/>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#ccc"
+                    />
+
+                <TextView
+                    android:id="@+id/positive"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_v2_dg_button_positive"
+                    android:gravity="center"
+                    android:textColor="#0387ff"
+                    android:textSize="14sp"
+                    tools:text="去赚钱"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

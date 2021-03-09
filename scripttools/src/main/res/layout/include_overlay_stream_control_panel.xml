@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/control_panel"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="right"
+    android:background="@drawable/bg_dg_shadow_card_half_left"
+    android:paddingBottom="50dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="50dp">
+
+    <com.mon.ui.buildup.CvCoreDrawableText
+        android:id="@+id/button_crop"
+        app:core_drawable_text="选取点击位置"
+        app:core_drawable_text_color="#3c3c3c"
+        app:core_drawable_text_max_ems="10"
+        app:core_drawable_text_size="12"
+        app:core_img_height="30dp"
+        app:core_img_src="@drawable/ic_edit_click"
+        app:core_img_width="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:core_layout_mode="vIT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <com.mon.ui.buildup.CvCoreDrawableText
+        android:id="@+id/button_back_save"
+        app:core_drawable_text="完成并返回列表"
+        app:core_drawable_text_color="#3c3c3c"
+        app:core_drawable_text_max_ems="10"
+        app:core_drawable_text_size="12"
+        app:core_img_height="30dp"
+        app:core_img_src="@drawable/ic_edit_back_save"
+        app:core_img_width="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:core_layout_mode="vIT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+    <com.mon.ui.buildup.CvCoreDrawableText
+        android:id="@+id/button_color"
+        app:core_drawable_text="范围识别颜色"
+        app:core_drawable_text_color="#3c3c3c"
+        app:core_drawable_text_max_ems="10"
+        app:core_drawable_text_size="12"
+        app:core_img_height="30dp"
+        app:core_img_src="@drawable/ic_edit_color"
+        app:core_img_width="30dp"
+        app:layout_constraintBottom_toTopOf="@id/button_back_save"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_crop"
+        app:core_layout_mode="vIT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

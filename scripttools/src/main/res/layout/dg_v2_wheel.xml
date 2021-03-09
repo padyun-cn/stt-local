@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+    >
+
+    <LinearLayout
+        android:background="@drawable/bg_dg_shadow_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            >
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="取消"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="确定"
+                android:textColor="#02AAFF"
+                android:textSize="14sp"
+                tools:ignore="RelativeOverlap"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="#88999999"
+                />
+
+        </RelativeLayout>
+
+        <com.mon.ui.buildup.CoreCvSimpleWheelSelector
+            android:id="@+id/selector"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:child_height="36dp"
+            app:selection_frame_color="#88999999"
+            app:selection_mask_color="#ededed"/>
+    </LinearLayout>
+</RelativeLayout>

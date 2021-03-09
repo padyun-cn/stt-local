@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/include_header"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+    <include layout="@layout/include_item_ui_condition_header_flags"/>
+    <include layout="@layout/include_item_ui_condition_header_img"/>
+</LinearLayout>

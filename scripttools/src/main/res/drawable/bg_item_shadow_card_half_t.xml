@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:left="@dimen/dimen_shadow_card_padding_left"
+                android:right="@dimen/dimen_shadow_card_padding_right"
+                android:top="@dimen/dimen_shadow_card_padding_top"/>
+            <solid android:color="#0DCCCCCC"/>
+            <corners android:topLeftRadius="10dp" android:topRightRadius="10dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:left="@dimen/dimen_shadow_card_padding_left"
+                android:right="@dimen/dimen_shadow_card_padding_right"
+                android:top="@dimen/dimen_shadow_card_padding_top"/>
+            <solid android:color="#10CCCCCC"/>
+            <corners android:topLeftRadius="10dp" android:topRightRadius="10dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:left="@dimen/dimen_shadow_card_padding_left"
+                android:right="@dimen/dimen_shadow_card_padding_right"
+                android:top="@dimen/dimen_shadow_card_padding_top"/>
+            <solid android:color="#15CCCCCC"/>
+            <corners android:topLeftRadius="10dp" android:topRightRadius="10dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:left="@dimen/dimen_shadow_card_padding_left"
+                android:right="@dimen/dimen_shadow_card_padding_right"
+                android:top="@dimen/dimen_shadow_card_padding_top"/>
+            <solid android:color="#20CCCCCC"/>
+            <corners android:topLeftRadius="10dp" android:topRightRadius="10dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:left="@dimen/dimen_shadow_card_padding_left"
+                android:right="@dimen/dimen_shadow_card_padding_right"
+                android:top="@dimen/dimen_shadow_card_padding_top"/>
+            <solid android:color="#25CCCCCC"/>
+            <corners android:topLeftRadius="10dp" android:topRightRadius="10dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF"/>
+            <corners android:topLeftRadius="@dimen/dimen_shadow_card_inner_radius" android:topRightRadius="@dimen/dimen_shadow_card_inner_radius"/>
+        </shape>
+    </item>
+</layer-list>

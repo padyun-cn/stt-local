@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        tools:text="正在压缩脚本，请勿关闭应用"
+        android:textSize="14sp"
+        android:id="@+id/progressTitle"
+        android:gravity="center"
+        android:textColor="#454545"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:textSize="10sp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/progressSubTitle"
+        android:gravity="center"
+        android:textColor="#999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="(1/2)"
+        tools:ignore="SmallSp" />
+
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:id="@+id/progressBar"
+        android:progress="10"
+        android:max="100"
+        android:progressDrawable="@drawable/core_progress_bar_round_drawable"
+        android:layout_width="200dp"
+        android:layout_height="5dp" />
+
+    <TextView
+        tools:text="35%"
+        android:layout_marginTop="5dp"
+        android:id="@+id/progressInfo"
+        android:textSize="12sp"
+        android:textColor="@color/core_progress_bar"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="SmallSp" />
+
+</LinearLayout>

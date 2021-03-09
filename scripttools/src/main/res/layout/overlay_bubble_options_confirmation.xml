@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="40dp"
+              android:layout_height="60dp">
+
+    <ImageView
+        android:contentDescription="@null"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:src="@drawable/ic_script_crop_option_done"
+        android:layout_width="40dp"
+        android:layout_height="30dp"/>
+
+    <ImageView
+        android:contentDescription="@null"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:src="@drawable/ic_script_crop_option_close"
+        android:layout_width="40dp"
+        android:layout_height="30dp"/>
+
+</LinearLayout>

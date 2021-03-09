@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="15dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/buttonScrollToBottom"
+        android:src="@drawable/ic_script_testing_tools_scroll_to_bottom"
+        android:contentDescription="@null"
+        android:layout_width="31dp"
+        android:layout_height="31dp"/>
+
+    <ImageView
+        android:id="@+id/buttonPauseOrResume"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_script_testing_pause"
+        android:contentDescription="@null"
+        android:layout_width="31dp"
+        android:layout_height="31dp"/>
+
+    <ImageView
+        android:id="@+id/buttonSetting"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_script_testing_setting"
+        android:contentDescription="@null"
+        android:layout_width="31dp"
+        android:layout_height="31dp"/>
+
+    <ImageView
+        android:id="@+id/buttonToggleTools"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_v2_collapse_button"
+        android:contentDescription="@null"
+        android:layout_width="31dp"
+        android:layout_height="31dp"/>
+
+</LinearLayout>

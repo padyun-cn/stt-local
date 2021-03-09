@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dimen_v3_img_width"
+    android:layout_height="@dimen/dimen_v3_img_height"
+    android:layout_marginTop="@dimen/dimen_v3_inner_margin_top_bt"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="@dimen/dimen_v3_inner_margin_top_bt"
+    android:background="@drawable/bg_frame_red_dimen_1px"
+    android:contentDescription="@null"
+    android:padding="1px"
+    android:id="@+id/img_symbol"
+    android:scaleType="fitCenter"
+    app:layout_constraintDimensionRatio="h,39:23" />

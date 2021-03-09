@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+              android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="名称："
+                    android:textColor="#ff222222"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"/>
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:hint="设置名称"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="#222"
+                    android:textColorHint="#999"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText,RtlHardcoded"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/l1"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d8d8d8"
+                app:layout_constraintTop_toBottomOf="@id/layout_name"
+                />
+
+            <com.padyun.scripttools.biz.ui.views.CvPSTransBgImageView
+                android:id="@+id/img_crop"
+                android:layout_width="70dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@null"
+                app:layout_constraintDimensionRatio="h,7:6"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/l1"
+                app:layout_constraintWidth_percent="0.4"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_right_arrow1"
+                android:layout_width="26dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:src="@drawable/ic_right_arrow_2"
+                app:layout_constraintBottom_toBottomOf="@id/img_crop"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/img_crop"/>
+
+            <LinearLayout
+                android:layout_marginStart="12dp"
+                android:id="@+id/layout_button_edit_crop"
+                app:layout_constraintBottom_toBottomOf="@id/img_crop"
+                app:layout_constraintLeft_toRightOf="@id/img_crop"
+                app:layout_constraintRight_toRightOf="@id/img_right_arrow1"
+                app:layout_constraintTop_toTopOf="@id/img_crop"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:id="@+id/button_edit_crop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="26dp"
+                    android:text="设置点击区域"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry"/>
+
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择一个区域，固定点击这个位置。"
+                    android:textColor="#ff666666"
+                    android:textSize="11sp"
+                    tools:ignore="HardcodedText,SmallSp"/>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/l2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#d8d8d8"
+                app:layout_constraintTop_toBottomOf="@id/layout_button_edit_crop"
+                />
+
+
+            <TextView
+                android:id="@+id/txt_timeout_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="点击延迟："
+                android:textColor="#ff222222"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/l2"
+                tools:ignore="HardcodedText"/>
+
+            <TextView
+                android:id="@+id/txt_timeout_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="毫秒"
+                android:textColor="#ff222222"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/txt_timeout_label"
+                app:layout_constraintRight_toLeftOf="@id/img_right_arrow1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/l3"
+                tools:ignore="HardcodedText"/>
+
+            <com.mon.ui.buildup.IntegerNumberInput
+                android:id="@+id/edit_timeout"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:hint="0"
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/txt_timeout_label"
+                app:layout_constraintRight_toLeftOf="@id/txt_timeout_unit"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/l3"
+                tools:ignore="HardcodedText,RtlHardcoded"/>
+
+            <View
+                android:id="@+id/l4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#d8d8d8"
+                app:layout_constraintLeft_toLeftOf="@id/txt_timeout_label"
+                app:layout_constraintRight_toLeftOf="@id/img_right_arrow1"
+                app:layout_constraintTop_toBottomOf="@id/txt_timeout_label"
+                />
+
+            <TextView
+                android:id="@+id/txt_tips_timeout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="说明：点击事件完成后需要等待几秒执行下面的事件。"
+                android:textColor="#ff666666"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="@id/txt_timeout_label"
+                app:layout_constraintTop_toBottomOf="@id/l4"
+                tools:ignore="HardcodedText,SmallSp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#d8d8d8"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_tips_timeout"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/button_finish"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_button_blue"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText"/>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="string_desc_counter">说明：\n1.在设置“未超过设置次数”的计时器时，必须在事件中设定相应的“计数器增加1次”。\n2.在设置“超过设置次数”的计时器时，必须在其他事件中设置“计数器增加1次”，并且当计数器达到设定数值时才执行条件下的事件。 \n3.在需要重复使用当前计数器时，请在其他条件的事件中添加重置计数器。</string>
+    <string name="string_alert_slide_setting">拖动选择“开始位置”与“结束位置”，\n点击完成生效。</string>
+    <!--    common-->
+    <string name="string_confirm">确定</string>
+    <string name="string_cancel">取消</string>
+    <!--    subtitle-->
+    <string name="string_subtitle_import_select">选择导入的任务</string>
+    <!--    dialog-->
+    <string name="string_dialog_new_script_title_name">命名</string>
+    <string name="string_dialog_new_script_msg_name">设置任务名称</string>
+</resources>

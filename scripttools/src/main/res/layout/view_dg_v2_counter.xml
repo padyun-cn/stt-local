@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="名称："
+                    android:textColor="#ff222222"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"/>
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:hint="设置计数器名称"
+                    android:inputType="text"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:textColor="#222"
+                    android:textColorHint="#999"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#D8D8D8"
+                />
+
+            <LinearLayout
+                android:id="@+id/button_less_than"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="计数器“未超过”设置次数"
+                    android:textColor="#ff222222"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"/>
+
+                <ImageView
+                    android:id="@+id/img_less_than"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_checkbutton_enable"
+                    tools:ignore="HardcodedText"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#D8D8D8"
+                />
+
+            <LinearLayout
+                android:id="@+id/button_more_than"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="计数器“超过”设置次数"
+                    android:textColor="#ff222222"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"/>
+
+                <ImageView
+                    android:id="@+id/img_more_than"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_checkbutton_enable"
+                    tools:ignore="HardcodedText"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#D8D8D8"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="设置次数："
+                    android:textColor="#ff222222"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_round"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/button_plus"
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/selector_round_half_left"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="+"
+                        android:textColor="#222"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText"/>
+
+                    <com.mon.ui.buildup.IntegerNumberInput
+                        android:id="@+id/edit"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:hint="0"
+                        android:lines="1"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:paddingTop="3dp"
+                        tools:ignore="HardcodedText"/>
+
+                    <TextView
+                        android:id="@+id/button_minus"
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/selector_round_half_right"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="-"
+                        android:textColor="#222"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#D8D8D8"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:layout_margin="20dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/string_desc_counter"
+                android:textColor="#ff222222"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/button_finish"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_button_blue"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        />
+</LinearLayout>

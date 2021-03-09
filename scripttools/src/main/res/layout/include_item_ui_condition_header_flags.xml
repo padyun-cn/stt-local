@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="40dp"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/center_guild_root"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/circleLayout"
+        android:layout_width="@dimen/dimen_v3_circle_size"
+        android:layout_height="@dimen/dimen_v3_circle_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/circle"
+            android:contentDescription="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_cond_loop_times_setting_infi" />
+
+        <TextView
+            android:id="@+id/circleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="99"
+            android:textSize="11sp"
+            android:textColor="#666"
+            tools:ignore="HardcodedText,SmallSp" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/circle_b"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#B5B5B5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/circleLayout"
+        app:layout_constraintRight_toRightOf="@id/circleLayout"
+        app:layout_constraintTop_toBottomOf="@id/circleLayout" />
+
+    <View
+        android:id="@+id/circle_t"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#B5B5B5"
+        app:layout_constraintBottom_toTopOf="@id/circleLayout"
+        app:layout_constraintLeft_toLeftOf="@id/circleLayout"
+        app:layout_constraintRight_toRightOf="@id/circleLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

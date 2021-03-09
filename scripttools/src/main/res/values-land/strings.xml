@@ -1,0 +1,9 @@
+<resources>
+    <string name="string_desc_counter">说明：\n1.在设置“未超过设置次数”的计时器时，必须在事件中设定相应的“计数器增加1次”。\n2.在设置“超过设置次数”的计时器时，必须在其他事件中设置“计数器增加1次”，并且当计数器达到设定数值时才执行条件下的事件。 \n3.在需要重复使用当前计数器时，请在其他条件的事件中添加重置计数器。</string>
+    <string name="string_screen_image_ratio">H,16:9</string>
+    <!--AcV2UiBase-->
+    <string name="string_dialog_activity_uibase_hinttitle">提示</string>
+    <string name="string_dialog_activity_uibase_hintmsg">尊敬的用户，云派需要通过权限确认，否则将无法正常运行。</string>
+    <string name="string_dialog_activity_uibase_toset">去设置</string>
+    <string name="string_dialog_activity_uibase_cancel">取消</string>
+</resources>

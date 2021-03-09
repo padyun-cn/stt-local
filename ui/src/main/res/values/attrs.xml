@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="IntegerNumberInput">
+        <attr name="default_transparent_background" format="boolean"/>
+        <attr name="value_max" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="CoreCvSimpleWheelSelector">
+        <attr name="child_height" format="dimension"/>
+        <attr name="selection_frame_color" format="color"/>
+        <attr name="selection_mask_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="CvImageCheckbox">
+        <attr name="checked" format="boolean" />
+        <attr name="checkedSelector" format="reference" />
+    </declare-styleable>
+</resources>

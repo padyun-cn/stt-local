@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="string_load_adapter_recyclerloadfooteradapter_finished">人家是有底线滴</string>
+    <string name="string_load_adapter_recyclerloadfooteradapter_loading">loading …</string>
+    <string name="string_load_adapter_recyclerloadfooteradapter_error">网络似乎开小差了，请重试</string>
+
+    <string name="string_text_overlay_progerss_is_loading">Loading … </string>
+</resources>

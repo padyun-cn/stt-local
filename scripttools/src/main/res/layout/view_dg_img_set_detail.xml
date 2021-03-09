@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@null"
+                android:visibility="gone"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--android:src="@drawable/bg_img_place_holder"-->
+
+                <com.padyun.scripttools.biz.ui.views.CvPSTransBgImageView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="@null"
+                    app:layout_constraintDimensionRatio="h,321:120"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/label_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="图片名称："
+                    android:textColor="#222"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="@id/img"
+                    app:layout_constraintTop_toBottomOf="@id/img"
+                    tools:ignore="HardcodedText"/>
+
+                <EditText
+                    android:id="@+id/imgName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:gravity="right"
+                    android:hint="设置名称"
+                    android:paddingRight="14dp"
+                    android:paddingTop="15dp"
+                    android:textColor="#222"
+                    android:textColorHint="#999999"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/label_name1"
+                    app:layout_constraintLeft_toRightOf="@id/label_name1"
+                    app:layout_constraintRight_toRightOf="@id/img"
+                    tools:ignore="HardcodedText"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="15dp"
+                android:background="#D8D8D8"
+                />
+
+            <!--相似度-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <TextView
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/label_sim1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="相似度："
+                    android:textColor="#222"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/txtPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="14dp"
+                    android:paddingTop="15dp"
+                    android:text="%"
+                    android:textColor="#222"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/label_sim1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_sim1"
+                    />
+
+                <com.mon.ui.buildup.IntegerNumberInput
+                    android:id="@+id/editSim"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:paddingRight="14dp"
+                    android:paddingTop="15dp"
+                    android:textColor="#222"
+                    android:textSize="12sp"
+                    app:value_max="100"
+                    app:layout_constraintBottom_toBottomOf="@id/label_sim1"
+                    app:layout_constraintLeft_toRightOf="@id/label_sim1"
+                    app:layout_constraintRight_toRightOf="@id/txtPercent"
+                    app:layout_constraintTop_toTopOf="@id/label_sim1"
+                    tools:text="80"
+                    />
+
+                <View
+                    android:id="@+id/line_inner_22"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#D8D8D8"
+                    app:layout_constraintTop_toBottomOf="@id/label_sim1"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="说明：相似度越高越接近原图"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/line_inner_22"
+                    tools:ignore="HardcodedText,SmallSp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="15dp"
+                android:background="#D8D8D8"
+                />
+
+            <!--识别图片类型-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <TextView
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/label_img_type1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="识别图片类型"
+                    android:textColor="#222"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/buttonImgType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:includeFontPadding="false"
+                    android:paddingRight="14dp"
+                    android:paddingTop="15dp"
+                    android:text="原图"
+                    android:textColor="#222"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/label_img_type1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_img_type1"
+                    app:layout_constraintVertical_bias="0.5"
+                    tools:ignore="HardcodedText"/>
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ic_right_arrow_2"
+                    app:layout_constraintBottom_toBottomOf="@id/label_img_type1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_img_type1"
+                    app:layout_constraintVertical_bias="0.5"
+                    />
+
+                <TextView
+                    android:id="@+id/text_tips_img_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="说明：相似度越高越接近原图"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/label_img_type1"
+                    tools:ignore="HardcodedText,SmallSp"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/seekbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="@id/buttonImgType"
+                    app:layout_constraintTop_toBottomOf="@id/text_tips_img_type">
+
+                    <TextView
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:id="@+id/label6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="二值化："
+                        android:textColor="#222"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText"/>
+
+                    <com.mon.ui.buildup.IntegerNumberInput
+                        android:id="@+id/edit_number_threashold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLength="3"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:paddingTop="10dp"
+                        android:textColor="#1F97FA"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/label6"
+                        app:layout_constraintLeft_toRightOf="@id/label6"
+                        tools:text="12312314123123"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="1dp"
+                        android:background="#1F97FA"
+                        app:layout_constraintLeft_toLeftOf="@id/edit_number_threashold"
+                        app:layout_constraintRight_toRightOf="@id/edit_number_threashold"
+                        app:layout_constraintTop_toBottomOf="@id/edit_number_threashold"/>
+
+                    <androidx.appcompat.widget.AppCompatSeekBar
+                        android:id="@+id/seek_threashold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:progress="160"
+                        android:progressBackgroundTint="#C8C8C8"
+                        android:progressTint="#5C85FC"
+                        android:thumbTint="#5C85FC"
+                        app:layout_constraintBottom_toBottomOf="@id/label6"
+                        app:layout_constraintLeft_toRightOf="@id/edit_number_threashold"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/label6"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="15dp"
+                android:background="#D8D8D8"
+                />
+
+            <!--图片状态-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <TextView
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/label_img_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="图片状态"
+                    android:textColor="#222"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/buttonState"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:includeFontPadding="false"
+                    android:paddingRight="14dp"
+                    android:paddingTop="15dp"
+                    android:text="存在"
+                    android:textColor="#222"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/label_img_state"
+                    app:layout_constraintLeft_toRightOf="@id/label_img_state"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_img_state"
+                    app:layout_constraintVertical_bias="0.5"
+                    tools:ignore="HardcodedText"/>
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ic_right_arrow_2"
+                    app:layout_constraintBottom_toBottomOf="@id/label_img_state"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_img_state"
+                    app:layout_constraintVertical_bias="0.5"
+                    android:visibility="invisible"
+                    />
+
+                <TextView
+
+                    android:id="@+id/label_img_state_exsit_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="14dp"
+                    android:text="判断时间："
+                    android:textColor="#222"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_img_state"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/txtUnitMillSec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="14dp"
+                    android:includeFontPadding="false"
+                    android:paddingTop="14dp"
+                    android:text=" 毫秒"
+                    android:textColor="#222"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/label_img_state_exsit_time"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_img_state_exsit_time"
+                    app:layout_constraintVertical_bias="0.5"
+                    tools:ignore="HardcodedText"/>
+
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/editContainerTimeout"-->
+<!--                    android:descendantFocusability="afterDescendants"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@id/label_img_state_exsit_time"-->
+<!--                    app:layout_constraintLeft_toRightOf="@id/label_img_state_exsit_time"-->
+<!--                    app:layout_constraintRight_toLeftOf="@id/txtUnitMillSec"-->
+<!--                    app:layout_constraintTop_toTopOf="@id/label_img_state_exsit_time"-->
+<!--                    app:layout_constraintVertical_bias="0.5"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <com.mon.ui.buildup.IntegerNumberInput-->
+<!--                        android:layout_gravity="end"-->
+<!--                        android:id="@+id/editTime"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="#00000000"-->
+<!--                        android:gravity="left"-->
+<!--                        android:includeFontPadding="false"-->
+<!--                        android:paddingTop="14dp"-->
+<!--                        android:text="0 "-->
+<!--                        android:textColor="#222"-->
+<!--                        android:textSize="12sp"-->
+<!--                        app:value_max="100000"-->
+<!--                        tools:ignore="HardcodedText"/>-->
+<!--                </FrameLayout>-->
+                <com.mon.ui.buildup.IntegerNumberInput
+                    android:id="@+id/editTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:paddingTop="14dp"
+                    android:text="0 "
+                    android:textColor="#222"
+                    android:textSize="12sp"
+                    app:value_max="600000"
+                    app:layout_constraintBottom_toBottomOf="@id/label_img_state_exsit_time"
+                    app:layout_constraintLeft_toRightOf="@id/label_img_state_exsit_time"
+                    app:layout_constraintRight_toLeftOf="@id/txtUnitMillSec"
+                    app:layout_constraintTop_toTopOf="@id/label_img_state_exsit_time"
+                    app:layout_constraintVertical_bias="0.5"
+                    tools:ignore="HardcodedText"/>
+
+                <View
+                    android:id="@+id/line_inner_33"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#D8D8D8"
+                    app:layout_constraintTop_toBottomOf="@id/label_img_state_exsit_time"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="图片存在x毫秒后执行"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/line_inner_33"
+                    tools:ignore="HardcodedText,SmallSp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/layout_state_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="15dp"
+                android:background="#D8D8D8"
+                />
+
+            <!--识别图片类型-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/label_img_region"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="查找区域"
+                    android:textColor="#222"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,MissingConstraints"/>
+
+                <TextView
+                    android:id="@+id/button_range_style_select"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:includeFontPadding="false"
+                    android:paddingRight="14dp"
+                    android:paddingTop="15dp"
+                    android:text="截取范围"
+                    android:textColor="#222"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/label_img_region"
+                    app:layout_constraintLeft_toRightOf="@id/label_img_region"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_img_region"
+                    app:layout_constraintVertical_bias="0.5"
+                    tools:ignore="HardcodedText"/>
+
+                <View
+                    android:id="@+id/img_right_arrow2"
+                    android:layout_width="6dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/ic_right_arrow_2"
+                    app:layout_constraintBottom_toBottomOf="@id/label_img_region"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_img_region"
+                    app:layout_constraintVertical_bias="0.5"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_specified_region"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintLeft_toLeftOf="@id/label_img_region"
+                    app:layout_constraintRight_toLeftOf="@id/img_right_arrow2"
+                    app:layout_constraintTop_toBottomOf="@id/label_img_region">
+
+                    <com.padyun.scripttools.biz.ui.views.CvPSTransBgImageView
+                        android:id="@+id/img_specified_region"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="15dp"
+                        android:contentDescription="@null"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="h,321:120"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.5"
+                        />
+
+                    <TextView
+                        android:id="@+id/button_range_set"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_button_capsule_blue"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="截取范围"
+                        android:textColor="#222"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="w,40:15"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5"
+                        tools:ignore="HardcodedText"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tipsOfCropRectRigion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="说明：截取范围指在如片中找截取的图片，若找到条件成立。"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/layout_specified_region"
+                    tools:ignore="HardcodedText,SmallSp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="15dp"
+                android:background="#D8D8D8"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_finish"
+        android:background="@drawable/selector_button_blue"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/button_finish_text"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="#FFF"
+            android:textSize="16sp"
+            />
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_toEndOf="@+id/button_finish_text"
+            android:id="@+id/button_finish_avi"
+            style="@style/AVLoadingIndicatorView.Small"
+            android:layout_marginStart="5dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:indicatorColor="#cccccc"
+            app:indicatorName="BallSpinFadeLoaderIndicator"
+            />
+    </RelativeLayout>
+</LinearLayout>

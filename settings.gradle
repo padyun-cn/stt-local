@@ -1,0 +1,3 @@
+include ':app', ':stlocalservice', ':utilities', ':ui', ':network', ':scripttoolscore',
+        /*':core', ':dtool',*/ ':manifest', /*':streamcore',*/ ':openCVLibrary341', ':scripttools', ':cropper'
+rootProject.name='StLocal'

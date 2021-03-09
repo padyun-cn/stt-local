@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="color_core_default_color_dot">#FFFE0000</color>
+    <color name="color_bg_transparent_pressed">#efefef</color>
+    <color name="core_progress_bar_bg">#dedede</color>
+    <color name="core_progress_bar">#1c82d4</color>
+</resources>

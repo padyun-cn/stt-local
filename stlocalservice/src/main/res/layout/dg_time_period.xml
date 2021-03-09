@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp"
+        tools:ignore="MissingDefaultResource">
+
+
+        <TextView
+            android:id="@+id/textTimeStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_item_brain_alarm_set_start"
+            android:textColor="#666666"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TimePicker
+            android:id="@+id/timePickerStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:timePickerMode="spinner"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTimeStart"
+            tools:targetApi="lollipop" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="14.5dp"
+            android:background="#999"
+            app:layout_constraintLeft_toLeftOf="@id/timePickerStart"
+            app:layout_constraintRight_toRightOf="@id/timePickerStart"
+            app:layout_constraintTop_toBottomOf="@id/timePickerStart" />
+
+        <TextView
+            android:id="@+id/textTimeEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/string_item_brain_alarm_set_end"
+            android:textColor="#666666"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timePickerStart" />
+
+        <TimePicker
+            android:id="@+id/timePickerEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:timePickerMode="spinner"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTimeEnd"
+            tools:targetApi="lollipop" />
+
+
+        <TextView
+            android:id="@+id/button_finish"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_button_blue"
+            android:gravity="center"
+            android:text="@string/string_confirm"
+            android:textColor="#FFF"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/line"
+            app:layout_constraintRight_toRightOf="@id/line"
+            app:layout_constraintTop_toBottomOf="@id/timePickerEnd"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/button_reset"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_button_red"
+            android:gravity="center"
+            android:text="@string/string_delete"
+            android:textColor="#FFF"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/line"
+            app:layout_constraintRight_toRightOf="@id/line"
+            app:layout_constraintTop_toBottomOf="@id/button_finish"
+            tools:ignore="HardcodedText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_common_corner_radius_small">5dp</dimen>
+
+    <dimen name="dimen_bg_script_padding_left">20dp</dimen>
+    <dimen name="dimen_bg_script_padding_left_inner">31dp</dimen>
+    <dimen name="dimen_bg_script_padding_left_inner2">42dp</dimen>
+
+    <dimen name="dimen_bg_script_padding_right">20dp</dimen>
+    <dimen name="dimen_bg_script_padding_right_inner">31dp</dimen>
+    <dimen name="dimen_bg_script_padding_right_inner2">42dp</dimen>
+
+    <dimen name="dimen_bg_script_padding_top">15dp</dimen>
+    <dimen name="dimen_bg_script_padding_top_inner">10dp</dimen>
+    <dimen name="dimen_bg_script_padding_top_inner2">12dp</dimen>
+
+    <dimen name="dimen_bg_script_margin_bgtail_top">20dp</dimen>
+    <dimen name="dimen_bg_script_margin_bgtail_top_inner">15dp</dimen>
+    <dimen name="dimen_bg_script_margin_bgtail_top_inner2">14dp</dimen>
+
+    <dimen name="dimen_shadow_card_padding_left">0px</dimen>
+    <dimen name="dimen_shadow_card_padding_left_large">1dp</dimen>
+    <dimen name="dimen_shadow_card_padding_top">0px</dimen>
+    <dimen name="dimen_shadow_card_padding_right">0px</dimen>
+    <dimen name="dimen_shadow_card_padding_bottom">0px</dimen>
+    <dimen name="dimen_shadow_card_radius">10dp</dimen>
+    <dimen name="dimen_shadow_card_radius_large">25dp</dimen>
+    <dimen name="dimen_shadow_card_inner_radius">5dp</dimen>
+    <dimen name="dimen_dg_shadow_card_radius">10dp</dimen>
+    <dimen name="dimen_v3_img_width">40dp</dimen>
+    <dimen name="dimen_v3_img_height">40dp</dimen>
+    <dimen name="dimen_v3_bulb_width">10dp</dimen>
+    <dimen name="dimen_v3_hand_width">13dp</dimen>
+    <dimen name="dimen_v3_hand_text">12sp</dimen>
+    <dimen name="dimen_v3_bulb_text">9sp</dimen>
+    <dimen name="dimen_v3_circle_size">25dp</dimen>
+    <dimen name="dimen_v3_inner_margin_top_bt">5dp</dimen>
+    <dimen name="dimen_v3_color_hex">7sp</dimen>
+    <dimen name="dimen_v3_slide_size">20dp</dimen>
+
+
+
+    <dimen name="dimen_crop_bubble_option_bg_height">100dp</dimen>
+    <dimen name="dimen_crop_bubble_option_bg_radius">50dp</dimen>
+
+    <dimen name="dimen_crop_bubble_option_height">22dp</dimen>
+    <dimen name="dimen_crop_bubble_option_height_n">24dp</dimen>
+    <dimen name="dimen_crop_bubble_option_hightlight">22dp</dimen>
+    <dimen name="dimen_crop_bubble_option_confirm_button_size">40dp</dimen>
+
+    <dimen name="dimen_script_wanning_icon_image_size">40dp</dimen>
+    <dimen name="dimen_script_wanning_icon_image_padding">7dp</dimen>
+    <dimen name="dimen_script_wanning_icon_image_margin_start">10dp</dimen>
+    <dimen name="dimen_dot_script_log_state_stroke_width">1dp</dimen>
+
+
+</resources>

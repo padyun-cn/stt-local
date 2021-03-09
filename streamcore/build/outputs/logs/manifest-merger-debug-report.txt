@@ -1,0 +1,59 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:1:1-27:12
+INJECTED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:1:1-27:12
+INJECTED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:1:1-27:12
+	package
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:2:5-36
+		INJECTED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml
+		INJECTED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:1:11-69
+uses-feature#0x00020000
+ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:4:5-54
+	android:glEsVersion
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:4:19-51
+uses-feature#android.hardware.touchscreen
+ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:7:5-9:36
+	android:required
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:9:9-33
+	android:name
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:8:9-52
+uses-feature#android.hardware.bluetooth
+ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:12:5-14:36
+	android:required
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:14:9-33
+	android:name
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:13:9-50
+uses-feature#android.hardware.gamepad
+ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:15:5-17:36
+	android:required
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:17:9-33
+	android:name
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:16:9-48
+uses-feature#android.hardware.usb.host
+ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:18:5-20:36
+	android:required
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:20:9-33
+	android:name
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:19:9-49
+uses-feature#android.hardware.type.pc
+ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:23:5-25:36
+	android:required
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:25:9-33
+	android:name
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml:24:9-48
+uses-sdk
+INJECTED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml
+INJECTED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml
+INJECTED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml
+INJECTED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml
+		INJECTED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml
+		ADDED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml
+		INJECTED from F:\DpfTemp\localscriptassistant\streamcore\src\main\AndroidManifest.xml

@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--    common-->
+    <string name="string_delete">删除</string>
+    <string name="string_rename">重命名</string>
+    <string name="string_confirm">确定</string>
+    <string name="string_cancel">取消</string>
+    <string name="string_back">返回</string>
+    <string name="string_dialog_title_tip">温馨提示</string>
+    　　　　　　　
+    <!--    button-->
+    <string name="string_button_create_new_script">新建任务</string>
+    <string name="string_button_script_start">开始任务</string>
+    <string name="string_button_script_editor_top_right">导入</string>
+    <string name="string_button_game_start">启动</string>
+
+
+    <!--    toast-->
+    <string name="string_toast_capture_failed">截图失败，请稍候重试</string>
+    <string name="string_toast_capture_success">截图成功，请继续操作</string>
+    <string name="string_toast_error_network">网络错误，请稍候重试</string>
+    <string name="string_toast_error_root_failed">请开启root权限后重试！</string>
+    <string name="string_toast_error_start_failed">启动游戏失败，请稍候重试！</string>
+    <string name="string_toast_create_new_script_failed">创建脚本失败</string>
+    <string name="string_toast_tips_overlay_permmission">请手动开启浮窗权限后再次操作</string>
+
+    <!--    dialog-->
+    <string name="string_dialog_create_new_script_message">确定删除 \'%s\' 任务么？ </string>
+    <string name="string_dialog_overlay_permission">请确保小助手的浮窗权限已开启</string>
+    <string name="string_dialog_overlay_permission_gosetting">去设置</string>
+    <string name="string_dialog_overlay_permission_set">稍后设置</string>
+    　　　　　　　
+    <!--    title-->
+    <string name="string_title_local_apps">本地助手</string>
+
+    <!--    text-->
+    <string name="string_item_brain_alarm_set_start">设置起始时间</string>
+    <string name="string_item_brain_alarm_set_end">设置终止时间</string>
+
+</resources>

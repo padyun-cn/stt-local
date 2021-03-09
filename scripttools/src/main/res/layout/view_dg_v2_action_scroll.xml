@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+              android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#ff222222"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="名称："
+                tools:ignore="HardcodedText"/>
+
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#d8d8d8"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                />
+
+            <ImageView
+                android:id="@+id/img_touch_start"
+                android:contentDescription="@null"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/l1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_img_place_holder"
+                />
+            <!--android:src="@drawable/ic_frame_add_hd"-->
+            <ImageView
+                android:id="@+id/img_touch_move_draw"
+                android:contentDescription="@null"
+                app:layout_constraintLeft_toRightOf="@id/img_touch_start"
+                android:layout_marginStart="27dp"
+                app:layout_constraintTop_toTopOf="@id/img_touch_start"
+                app:layout_constraintBottom_toBottomOf="@id/img_touch_start"
+                android:layout_width="17dp"
+                android:layout_height="21dp"
+                android:src="@drawable/ic_draw_touch_move"
+                />
+
+            <ImageView
+                android:id="@+id/img_touch_end"
+                android:contentDescription="@null"
+                android:layout_marginStart="27dp"
+                app:layout_constraintLeft_toRightOf="@id/img_touch_move_draw"
+                app:layout_constraintTop_toTopOf="@id/img_touch_start"
+                app:layout_constraintBottom_toBottomOf="@id/img_touch_start"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_img_place_holder"
+                />
+
+            <ImageView
+                android:id="@+id/img_right_arrow"
+                android:layout_width="26dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@null"
+                android:padding="10dp"
+                android:src="@drawable/ic_right_arrow_2"
+                app:layout_constraintBottom_toBottomOf="@id/img_touch_start"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/img_touch_start"/>
+
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/editText"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintRight_toLeftOf="@id/img_right_arrow"
+                app:layout_constraintBaseline_toBaselineOf="@id/name"
+                android:background="#00000000"
+                android:hint="设置名称"
+                android:textColorHint="#ff999999"
+                android:textSize="12sp"
+                android:gravity="right"
+                android:inputType="text"
+                app:layout_constraintWidth_percent="0.4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText,RtlHardcoded"/>
+
+            <TextView
+                android:id="@+id/button_set"
+                app:layout_constraintBottom_toBottomOf="@id/img_touch_start"
+                app:layout_constraintTop_toTopOf="@id/img_touch_start"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="40dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingEnd="46dp"
+                android:text="点击设置"
+                android:textColor="#000"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText"/>
+            <View
+                android:id="@+id/l2"
+                app:layout_constraintTop_toBottomOf="@id/img_touch_start"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#d8d8d8"
+                />
+
+
+            <TextView
+                android:id="@+id/txt_timeout_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="事件延迟："
+                android:textColor="#ff222222"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/l2"
+                tools:ignore="HardcodedText"/>
+
+            <TextView
+                android:id="@+id/txt_timeout_unit"
+                android:layout_width="wrap_content"
+                app:layout_constraintRight_toLeftOf="@id/img_right_arrow"
+                android:layout_height="wrap_content"
+                android:text="毫秒"
+                android:textColor="#ff222222"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/txt_timeout_label"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/l3"
+                tools:ignore="HardcodedText"/>
+
+            <com.mon.ui.buildup.IntegerNumberInput
+                android:id="@+id/edit_timeout"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:hint="0"
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/txt_timeout_label"
+                app:layout_constraintRight_toLeftOf="@id/txt_timeout_unit"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/l3"
+                tools:ignore="HardcodedText,RtlHardcoded"/>
+
+            <View
+                android:id="@+id/l4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#d8d8d8"
+                app:layout_constraintLeft_toLeftOf="@id/txt_timeout_label"
+                app:layout_constraintRight_toLeftOf="@id/img_right_arrow"
+                app:layout_constraintTop_toBottomOf="@id/txt_timeout_label"
+                />
+
+            <TextView
+                android:id="@+id/txt_tips_timeout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="说明：点击事件完成后需要等待几秒执行下面的事件。"
+                android:textColor="#ff666666"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="@id/txt_timeout_label"
+                app:layout_constraintTop_toBottomOf="@id/l4"
+                tools:ignore="HardcodedText,SmallSp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#d8d8d8"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_tips_timeout"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/button_finish"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_button_blue"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText"/>
+    
+</LinearLayout>

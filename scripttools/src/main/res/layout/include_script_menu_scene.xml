@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RtlHardcoded"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="45dp"
+    android:background="@drawable/bg_bubble_menu"
+    android:orientation="vertical"
+    android:id="@+id/layout_menu_scene"
+    android:visibility="gone"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/button_menu_scene_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <View
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:background="@drawable/ic_menu_question_mark"/>
+
+        <TextView
+            tools:ignore="HardcodedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:includeFontPadding="false"
+            android:text="使用帮助"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#999"/>
+
+    <LinearLayout
+        android:id="@+id/button_menu_config"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <View
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:background="@drawable/ic_config"/>
+
+        <TextView
+            tools:ignore="HardcodedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:includeFontPadding="false"
+            android:text="设备配置"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#999"/>
+
+    <LinearLayout
+        android:id="@+id/button_menu_collapse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="10dp">
+
+        <View
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:background="@drawable/ic_menu_up"/>
+
+        <TextView
+            tools:ignore="HardcodedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:includeFontPadding="false"
+            android:text="收起全部"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/button_menu_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <View
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:background="@drawable/ic_menu_down"/>
+
+        <TextView
+            tools:ignore="HardcodedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:includeFontPadding="false"
+            android:text="展开全部"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

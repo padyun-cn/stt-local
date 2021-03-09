@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_dg_shadow_card"
+        android:overScrollMode="never"
+        android:paddingBottom="@dimen/dimen_shadow_card_padding_bottom"
+        android:paddingStart="@dimen/dimen_shadow_card_padding_left"
+        android:paddingEnd="@dimen/dimen_shadow_card_padding_right"
+        android:paddingTop="@dimen/dimen_shadow_card_padding_top"/>
+
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:visibility="gone"
+        android:background="@drawable/bg_dg_shadow_card_half_t"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/list"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="选择保存方式"
+            android:textColor="#222"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/tips"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="选择保存方式"
+            android:textColor="#666"
+            android:textSize="12sp"
+            />
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d8d8d8"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

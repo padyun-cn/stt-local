@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="80dp"
+    android:background="@drawable/bg_frame_overlay_dialog_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:text="命名"
+        android:textColor="#222"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:id="@+id/line0"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/title"
+        android:background="#efefef"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="1dp"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_script_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line0"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置任务名称"
+            android:textColor="#7BD3FF"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/label1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@id/label1"
+            android:background="#00000000"
+            android:gravity="right"
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColor="#222"
+            android:textColorHint="#999"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,LabelFor,RtlHardcoded" />
+
+
+        <View
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/editName"
+            android:layout_alignStart="@id/editName"
+            android:layout_alignEnd="@id/editName"
+            android:background="#7BD3FF" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_server_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_script_name"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Server-IP"
+            android:textColor="#7BD3FF"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/editServerIp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/label2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@id/label2"
+            android:background="#00000000"
+            android:gravity="right"
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColor="#222"
+            android:textColorHint="#999"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText,LabelFor,RtlHardcoded" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/layout_server_ip"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#ededed"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/layout_as_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/l2"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/label3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AS-IP"
+            android:textColor="#7BD3FF"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/editAsIp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/label3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@id/label3"
+            android:background="#00000000"
+            android:gravity="right"
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColor="#222"
+            android:textColorHint="#999"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText,LabelFor,RtlHardcoded" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/l3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/layout_as_ip"
+        android:layout_marginTop="25dp"
+        android:background="#ededed" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/l3"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bottom_left_round_button"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="取消"
+            android:textColor="#666"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/div"
+            android:layout_width="1dp"
+            android:layout_height="33dp"
+            android:background="#D8D8D8" />
+
+        <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bottom_right_round_button">
+
+            <TextView
+                android:id="@+id/textConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="确认"
+                android:textColor="#02AAFF"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/progressBar"
+                style="@style/AVLoadingIndicatorView.Small"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="2dp"
+                android:layout_toEndOf="@id/textConfirm"
+                android:visibility="invisible"
+                app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_v2_common_round_corner_small"
+    >
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:id="@+id/title"
+        android:textColor="#222"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#dedede"
+        />
+
+    <LinearLayout
+        android:layout_below="@id/line"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="输入时间："
+            android:layout_width="60dp"
+            android:textColor="#222"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText"/>
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:hint="输入名称"
+            android:textColor="#222"
+            android:textColorHint="#999"
+            android:textSize="14sp"
+            android:inputType="text"
+            tools:ignore="HardcodedText"/>
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_below="@id/l1"
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#dedede"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="过滤日志："
+            android:layout_width="60dp"
+            android:textColor="#222"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText"/>
+
+        <Spinner
+            android:layout_marginStart="10dp"
+            android:id="@+id/spin_log_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_below="@id/l2"
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#dedede"
+        />
+
+    <TextView
+        android:layout_below="@id/line3"
+        android:text="确认"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:id="@+id/button"
+        android:textColor="#222"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText"/>
+
+    <FrameLayout
+        android:visibility="invisible"
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_gravity="center"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+
+    </FrameLayout>
+
+</RelativeLayout>

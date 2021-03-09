@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="0dp">
+
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/label_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="名称："
+                    android:textColor="#222"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:ignore="HardcodedText"/>
+
+                <EditText
+                    android:visibility="gone"
+                    android:id="@+id/edit_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="14dp"
+                    android:layout_marginStart="10dp"
+                    android:paddingTop="10dp"
+                    android:background="#00000000"
+                    android:gravity="end"
+                    android:hint="设置名称"
+                    android:lines="1"
+                    android:textColor="#666"
+                    android:textColorHint="#999"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/label_name"
+                    app:layout_constraintLeft_toRightOf="@id/label_name"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintVertical_bias="0.5"
+                    tools:ignore="HardcodedText"/>
+
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/line_inner_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#D8D8D8"
+                    app:layout_constraintTop_toBottomOf="@id/label_name"
+                    />
+
+                <TextView
+                    android:id="@+id/img_preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="截图预览"
+                    android:textColor="#222"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line_inner_1"
+                    tools:ignore="HardcodedText"/>
+
+                <com.padyun.scripttools.biz.ui.views.CvPSTransBgImageView
+                    android:id="@+id/img"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@null"
+                    android:scaleType="centerInside"
+                    app:layout_constraintDimensionRatio="h,150:80"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_preview"
+                    app:layout_constraintWidth_percent="0.48"
+                    />
+
+
+                <TextView
+                    android:id="@+id/text_coord"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="#222222"
+                    android:textSize="14sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/img"
+                    app:layout_constraintWidth_percent="0.5"
+                    tools:text="坐标：1401，2401，3961，1441"/>
+
+                <TextView
+                    android:id="@+id/preview_tips"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_coord"
+                    app:layout_constraintWidth_percent="0.5"
+                    tools:ignore="SmallSp"
+                    android:text="说明：选择取色的区域"/>
+
+                <TextView
+                    android:id="@+id/text_button_range"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="#000000"
+                    android:textSize="11sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/preview_tips"
+                    app:layout_constraintWidth_percent="0.4"
+                    tools:ignore="RtlHardcoded,SmallSp"
+                    android:text="点击选取范围"/>
+
+                <View
+                    android:id="@+id/img_right_arrow"
+                    android:layout_width="6dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/ic_right_arrow_2"
+                    app:layout_constraintBottom_toBottomOf="@id/text_button_range"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/text_button_range"
+                    app:layout_constraintVertical_bias="0.5"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="#D8D8D8"
+                />
+
+            <!--颜色值-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/label_color_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="颜色值"
+                    android:textColor="#222"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"/>
+
+                <View
+                    android:id="@+id/view_color_value"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="7dp"
+                    android:background="#f00"
+                    android:text="颜色值"
+                    android:textColor="#222"
+                    android:textSize="14sp"
+                    app:layout_constraintDimensionRatio="h,151:24"
+                    app:layout_constraintTop_toBottomOf="@id/label_color_value"
+                    app:layout_constraintWidth_percent="0.48"
+                    tools:ignore="HardcodedText"/>
+
+
+                <TextView
+                    android:id="@+id/text_button_color_pick"
+                    android:layout_width="0dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:paddingEnd="14dp"
+                    android:gravity="center_vertical|right"
+                    android:text="点击取色"
+                    android:textColor="#222"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/view_color_value"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/view_color_value"
+                    app:layout_constraintTop_toTopOf="@id/view_color_value"
+                    tools:ignore="HardcodedText,RtlHardcoded"/>
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/ic_right_arrow_2"
+                    app:layout_constraintBottom_toBottomOf="@id/text_button_color_pick"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/text_button_color_pick"
+                    app:layout_constraintVertical_bias="0.5"
+                    />
+
+                <TextView
+                    android:id="@+id/color_value_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/view_color_value"
+                    tools:ignore="HardcodedText,SmallSp"
+                    tools:text="色值： R : 204 G : 157 B : 157"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/divider_line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="#D8D8D8"
+                />
+            <!--相似度-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/label_sim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="相似度："
+                    android:textColor="#222"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/sim_value_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="14dp"
+                    android:text="%"
+                    android:paddingTop="10dp"
+                    android:textColor="#222"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/label_sim"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_sim"
+                    tools:ignore="HardcodedText"/>
+
+                <com.mon.ui.buildup.IntegerNumberInput
+                    android:id="@+id/text_sim_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#0000"
+                    android:paddingTop="10dp"
+                    android:gravity="right"
+                    android:hint="输入相似值"
+                    android:inputType="number"
+                    android:textColor="#222"
+                    android:textColorHint="#666"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/label_sim"
+                    app:layout_constraintRight_toLeftOf="@id/sim_value_symbol"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText,RtlHardcoded"
+                    tools:text="80"/>
+
+                <View
+                    android:id="@+id/line_inner_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#D8D8D8"
+                    app:layout_constraintTop_toBottomOf="@id/label_sim"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="说明：颜色的相似度，越接近100％越接近原色。"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/line_inner_2"
+                    tools:ignore="HardcodedText,SmallSp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="#D8D8D8"
+                />
+            <!--颜色识别变化-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_color_change_selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/label_img_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="颜色识别变化"
+                    android:textColor="#222"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:id="@+id/text_color_change_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="14dp"
+                    android:includeFontPadding="false"
+                    android:text="无变化"
+                    android:textColor="#222"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/label_img_type"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_img_type"
+                    app:layout_constraintVertical_bias="0.5"
+                    tools:ignore="HardcodedText"/>
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/ic_right_arrow_2"
+                    app:layout_constraintBottom_toBottomOf="@id/label_img_type"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_img_type"
+                    app:layout_constraintVertical_bias="0.5"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="#D8D8D8"
+                />
+
+            <!--颜色变化百分比-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_color_change_rate"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    >
+
+                    <TextView
+                        android:paddingTop="10dp"
+                        android:id="@+id/label_color_change"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="颜色变化百分比："
+                        android:textColor="#222"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText"/>
+
+                    <TextView
+                        android:id="@+id/change_value_symbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="14dp"
+                        android:text="%"
+                        android:paddingTop="10dp"
+                        android:textColor="#222"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/label_color_change"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/label_color_change"
+                        tools:ignore="HardcodedText"/>
+
+                    <com.mon.ui.buildup.IntegerNumberInput
+                        android:paddingTop="10dp"
+                        android:id="@+id/text_color_change_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#0000"
+                        android:gravity="right"
+                        android:hint="输入相似值"
+                        android:inputType="number"
+                        android:numeric="integer"
+                        android:textColor="#222"
+                        android:textColorHint="#666"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/label_color_change"
+                        app:layout_constraintRight_toLeftOf="@id/change_value_symbol"
+                        app:layout_constraintTop_toTopOf="@id/label_color_change"
+                        tools:ignore="HardcodedText,RtlHardcoded"
+                        tools:text="80"/>
+
+
+                    <View
+                        android:id="@+id/line_inner_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#D8D8D8"
+                        app:layout_constraintTop_toBottomOf="@id/label_color_change"
+                        />
+
+                    <TextView
+                        android:id="@+id/label_color_pixel_add_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#222"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@id/line_inner_3"
+                        tools:ignore="HardcodedText"
+                        tools:text="允许颜色增加个数：0 像素"/>
+
+                    <TextView
+                        android:id="@+id/label_color_pixel_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:textColor="#222"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@id/label_color_pixel_add_count"
+                        tools:ignore="HardcodedText"
+                        tools:text="当前颜色个数：12585 像素"/>
+
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/text_button_color_pixel_range_pick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="14dp"
+                        android:includeFontPadding="false"
+                        android:text="点击选取范围"
+                        android:textColor="#222"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/label_color_pixel_count"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/label_color_pixel_add_count"
+                        app:layout_constraintVertical_bias="0.5"
+                        tools:ignore="HardcodedText"/>
+
+                    <View
+                        android:layout_width="6dp"
+                        android:layout_height="10dp"
+                        android:visibility="invisible"
+                        android:background="@drawable/ic_right_arrow_2"
+                        app:layout_constraintBottom_toBottomOf="@id/label_color_pixel_count"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/label_color_pixel_add_count"
+                        app:layout_constraintVertical_bias="0.5"
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="说明：允许图片在一个范围内有一定的变化，若数值为10％，表示图片变化10％还认为图片为改变。"
+                        android:textColor="#666666"
+                        android:textSize="11sp"
+                        app:layout_constraintTop_toBottomOf="@id/label_color_pixel_count"
+                        tools:ignore="HardcodedText,SmallSp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_color_change_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    >
+
+                    <TextView
+                        android:paddingTop="15dp"
+                        android:id="@+id/label_color_change_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="颜色变化数量："
+                        android:textColor="#222"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText"/>
+
+
+                    <com.mon.ui.buildup.IntegerNumberInput
+                        android:paddingTop="15dp"
+                        android:id="@+id/text_color_change_num"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="#0000"
+                        android:gravity="right"
+                        android:hint="输入数量"
+                        android:inputType="number"
+                        android:textColor="#222"
+                        android:textColorHint="#666"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/label_color_change_num"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/label_color_change_num"
+                        app:layout_constraintTop_toTopOf="@id/label_color_change_num"
+                        tools:ignore="HardcodedText,RtlHardcoded"
+                        tools:text="80"/>
+
+
+                    <View
+                        android:id="@+id/line_inner_3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#D8D8D8"
+                        app:layout_constraintTop_toBottomOf="@id/label_color_change_num"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="说明：设置一个数值，通过当前的实际数量比较数值来判断是否成立的条件。"
+                        android:textColor="#666666"
+                        android:textSize="11sp"
+                        app:layout_constraintTop_toBottomOf="@id/line_inner_3_1"
+                        tools:ignore="HardcodedText,SmallSp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="#D8D8D8"
+                />
+
+            <!--识别图片类型-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/label_color_change_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="颜色时间段变化："
+                    android:textColor="#222"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:paddingTop="15dp"
+                    android:id="@+id/time_value_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="14dp"
+                    android:text=" 毫秒"
+                    android:textColor="#222"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/label_color_change_time"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_color_change_time"
+                    tools:ignore="HardcodedText"/>
+
+                <com.mon.ui.buildup.IntegerNumberInput
+                    android:id="@+id/text_time_edit"
+                    android:paddingTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#0000"
+                    android:gravity="right"
+                    android:hint="输入时间"
+                    android:inputType="numberSigned"
+                    android:textColor="#222"
+                    android:textColorHint="#666"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/label_color_change_time"
+                    app:layout_constraintRight_toLeftOf="@id/time_value_symbol"
+                    app:layout_constraintTop_toTopOf="@id/label_color_change_time"
+                    tools:ignore="HardcodedText,RtlHardcoded"
+                    tools:text="1000"/>
+
+                <View
+                    android:id="@+id/line_inner_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#D8D8D8"
+                    app:layout_constraintTop_toBottomOf="@id/label_color_change_time"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="说明：颜色在一定时间段内是否产生变化；未发生变化可以识别到，发生变化则识别不到。"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/line_inner_4"
+                    tools:ignore="HardcodedText,SmallSp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="15dp"
+                android:background="#D8D8D8"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/button_finish"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_button_blue"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText"/>
+</LinearLayout>

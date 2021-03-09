@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:clickable="true"
+        android:id="@+id/dropper_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_shadow_card_no_corner"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/pixel_view_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_shadow_frame_stroke"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/pixel_view_bgimg"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_margin="4dp"
+                />
+
+            <com.padyun.scripttools.biz.ui.views.CvPixelView
+                android:id="@+id/pixel_view"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_marginStart="4dp"
+            android:id="@+id/txt_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:textColor="#222"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/pixel_view_layout"
+            app:layout_constraintTop_toBottomOf="@id/pixel_view_layout"
+            tools:text="R:204 G:1 B: 58"/>
+
+        <TextView
+            android:layout_marginStart="4dp"
+            android:id="@+id/label_color_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="颜色预览："
+            android:textColor="#999"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toLeftOf="@id/pixel_view_layout"
+            app:layout_constraintTop_toBottomOf="@id/txt_color"
+            tools:ignore="HardcodedText,SmallSp"/>
+
+        <FrameLayout
+            android:layout_marginStart="4dp"
+            android:id="@+id/layout_color_show"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_frame_black_stroke"
+            android:padding="1dp"
+            app:layout_constraintLeft_toLeftOf="@id/pixel_view_layout"
+            app:layout_constraintTop_toBottomOf="@id/label_color_preview">
+
+            <View
+                android:id="@+id/view_color_show"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintRight_toRightOf="@+id/pixel_view_layout"
+            android:background="@drawable/bg_frame_black_stroke_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/label_color_preview">
+
+            <View
+                android:id="@+id/button_dropper_up"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_up_move"/>
+
+            <View
+                android:id="@+id/button_dropper_left"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_left_move"/>
+
+            <View
+                android:id="@+id/button_dropper_down"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/ic_down_move"/>
+
+            <View
+                android:id="@+id/button_dropper_right"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="55dp"
+                android:background="@drawable/ic_right_move"
+                tools:ignore="RtlHardcoded"/>
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

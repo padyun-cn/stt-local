@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_margin="12dp"
+        android:id="@+id/button"
+        android:background="#FFB21F"
+        android:text="@string/string_back"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:layout_width="66dp"
+        android:layout_height="33dp"/>
+</FrameLayout>

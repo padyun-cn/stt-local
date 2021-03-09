@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    common-->
+    <string name="string_delete">Delete</string>
+    <string name="string_rename">Rename</string>
+    <string name="string_confirm">Confirm</string>
+    <string name="string_cancel">Cancel</string>
+    <string name="string_back">返回</string>
+    <string name="string_dialog_title_tip">Tips</string>
+
+    <!--    button-->
+    <string name="string_button_create_new_script">New Script</string>
+    <string name="string_button_script_editor_top_right">导入</string>
+    <string name="string_button_game_start">启动</string>
+
+    <!--    toast-->
+    <string name="string_toast_capture_success">Success!</string>
+    <string name="string_toast_capture_failed">Fail!</string>
+    <string name="string_toast_error_network">Connection Failed</string>
+    <string name="string_toast_error_root_failed">启动失败，请稍候重试</string>
+    <string name="string_toast_error_start_failed">启动游戏失败，请稍候重试！</string>
+    <string name="string_toast_create_new_script_failed">创建脚本失败</string>
+    <string name="string_toast_tips_overlay_permmission">请手动开启浮窗权限后再次操作</string>
+
+    <!--    dialog-->
+    <string name="string_dialog_create_new_script_message">确定删除 \'%s\' 任务么？ </string>
+    <string name="string_dialog_overlay_permission">请确保小助手的浮窗权限已开启</string>
+    <string name="string_dialog_overlay_permission_gosetting">去设置</string>
+    <string name="string_dialog_overlay_permission_set">稍后设置</string>
+
+    <!--    title-->
+    <string name="string_title_local_apps">本地助手</string>
+
+
+    <!--    text-->
+    <string name="string_item_brain_alarm_set_start">起始时间</string>
+    <string name="string_item_brain_alarm_set_end">终止时间</string>
+
+</resources>

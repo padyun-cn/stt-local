@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.uls.stlocalservice" >
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <application>
+        <activity android:name=".ui.activity.OverlayCropActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.OverlayCropLandActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".ui.activity.EditorListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.EditorListLandActivity" android:screenOrientation="landscape"/>
+        <service android:name=".service.LtFairyClientService"/>
+    </application>
+</manifest>

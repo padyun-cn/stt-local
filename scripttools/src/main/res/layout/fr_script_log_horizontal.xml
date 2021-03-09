@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mon.ui.buildup.CvCoreSingleChildDragableLayout
+        android:id="@+id/handleUpContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:core_adsorption_effect_on="false"
+        app:core_drag_vertical="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/btnHandleUp"
+            android:paddingTop="20dp"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_script_log_horizontal_handle_up" />
+    </com.mon.ui.buildup.CvCoreSingleChildDragableLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/handleDownContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.yanzhenjie.recyclerview.SwipeRecyclerView
+            android:id="@+id/listLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_script_log"
+            android:minHeight="100dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/mask"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:contentDescription="@null"
+            android:src="@drawable/gradient_script_log_mask"
+            app:layout_constraintBottom_toBottomOf="@id/listLog"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/listLog" />
+
+
+        <ImageView
+            android:id="@+id/btnHandleDown"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_script_log_horizontal_handle_down"
+            app:layout_constraintBottom_toTopOf="@id/listLog"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/listLog"
+            app:layout_constraintLeft_toLeftOf="@id/mask"
+            app:layout_constraintRight_toRightOf="@id/mask"
+            app:layout_constraintTop_toTopOf="@id/listLog">
+
+            <ImageView
+                android:id="@+id/btnStart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/ic_button_script_stream_log_play" />
+
+            <ImageView
+                android:id="@+id/btnStop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/ic_button_script_stream_log_stop" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

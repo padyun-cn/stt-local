@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_bg_item_pressed">#EDEDED</color>
+    <color name="color_button_text_cancel">#E62727</color>
+    <color name="color_log_red">#FE588A</color>
+    <color name="color_log_gray">#7D7D7D</color>
+    <color name="color_log_green">#1CA79D</color>
+    <color name="color_v3_run_test">#1A89FF</color>
+
+    <color name="color_editor_item_disable">#ececec</color>
+</resources>

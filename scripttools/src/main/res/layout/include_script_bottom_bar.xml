@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_light_shadow_card_t"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:id="@+id/btn_new_scene"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+        <ImageView
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_new_scene"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            />
+
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新建场景"
+            android:textColor="#ff222222"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText"/>
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/block_1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        android:id="@+id/btn_start_game"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_start_stream"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            />
+
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进入游戏"
+            android:textColor="#ff222222"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/btn_build"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_build"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_script_resume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/txt_build"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="运行脚本"
+            android:textColor="#ff222222"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText"/>
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/block_3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        android:id="@+id/btn_stop_game"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_v2_stop_stream"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            />
+
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停止脚本"
+            android:textColor="#ff222222"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText"/>
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/block_4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/btn_log_setting"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_set"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            />
+
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    设置    "
+            android:textColor="#ff222222"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AnimFade" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/anim_v1_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_v1_fade_out</item>
+    </style>
+    <style name="V2TaskOptionAnim" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/anim_v1_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_v1_fade_out</item>
+    </style>
+    <style name="options" parent="@android:style/Theme.Dialog">
+
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/V2TaskOptionAnim</item>
+
+    </style>
+
+    <declare-styleable name="CvCoreDrawableText">
+        <attr name="core_layout_mode">
+            <enum name="hIT" value="0"/>
+            <enum name="hTI" value="1"/>
+            <enum name="vIT" value="2"/>
+            <enum name="vTI" value="3"/>
+        </attr>
+        <attr name="core_text_gravity">
+            <enum name="normal" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+        <attr name="core_img_scale_type">
+            <enum name="matrix" value="0"/>
+            <enum name="fitXY" value="1"/>
+            <enum name="fitStart" value="2"/>
+            <enum name="fitCenter" value="3"/>
+            <enum name="fitEnd" value="4"/>
+            <enum name="center" value="5"/>
+            <enum name="centerCrop" value="6"/>
+            <enum name="centerInside" value="7"/>
+        </attr>
+        <attr name="core_text_bold" format="boolean"/>
+        <attr name="core_default_center_gravity" format="boolean"/>
+        <attr name="core_img_width" format="dimension"/>
+        <attr name="core_img_height" format="dimension"/>
+        <attr name="core_corner_img_width" format="dimension"/>
+        <attr name="core_corner_img_height" format="dimension"/>
+        <attr name="core_corner_img_gravity" format="integer"/>
+        <attr name="core_corner_img_src" format="reference"/>
+        <attr name="core_corner_img_show" format="boolean"/>
+        <attr name="core_img_src" format="reference"/>
+        <attr name="core_drawable_margin" format="dimension"/>
+        <attr name="core_drawable_text" format="reference|string"/>
+        <attr name="core_drawable_text_size" format="integer"/>
+        <attr name="core_drawable_text_max_ems" format="integer"/>
+        <attr name="core_drawable_text_ems" format="integer"/>
+        <attr name="core_drawable_text_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="CvCoreSingleChildDragableLayout">
+        <attr name="core_adsorption_effect_on" format="boolean"/>
+        <attr name="core_drag_horizontal" format="boolean"/>
+        <attr name="core_drag_vertical" format="boolean"/>
+    </declare-styleable>
+
+    <style name="CoreCommonDg" parent="@android:style/Theme.Dialog">
+
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/V2TaskOptionAnim</item>
+    </style>
+</resources>
