@@ -19,6 +19,6 @@
 #### 当前可以：
 
 * 下载或者clone源代码，导入到Android-Studio/IDE 中，直接编译运行Demo工程
-* 直接下载Release中的最新Apk
+* 直接下载[最近发布的Release](https://github.com/padyun-cn/stt-local/releases)中的Apk
 
 > ***请确保当前的设备为可Root环境。***
