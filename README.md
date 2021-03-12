@@ -40,5 +40,14 @@
 3. 滑动，起始点到终点设置
 ```
 ![视频录制 12021312181104](https://user-images.githubusercontent.com/80308909/110925649-6d5e6780-835e-11eb-971c-1ec6d25bf746.gif)
-##### 返回后会新增一个条件条目，可以进行一些预设置和调整：
+
+>返回后会新增一个条件条目，可以进行一些预设置和调整：
 ![视频录制 120213121813215](https://user-images.githubusercontent.com/80308909/110926012-d5ad4900-835e-11eb-8c1f-e5aeee9ac276.gif)
+>包括使用opencv对图片的一些调整处理设置包括二值化，hls等
+![视频录制 120213121816136](https://user-images.githubusercontent.com/80308909/110926289-291f9700-835f-11eb-983c-5fed770593d4.gif)
+
+#### 4. 最后看一下运行效果：
+![视频录制 120213121820207](https://user-images.githubusercontent.com/80308909/110926734-b9f67280-835f-11eb-8d74-56b6c3c5873c.gif)
+
+
+
