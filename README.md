@@ -46,7 +46,8 @@
 ![视频录制 120213121813215](https://user-images.githubusercontent.com/80308909/110926012-d5ad4900-835e-11eb-8c1f-e5aeee9ac276.gif)
 >包括使用opencv对图片的一些调整处理设置包括二值化，hls等：
 
-![视频录制 120213121816136](https://user-images.githubusercontent.com/80308909/110926289-291f9700-835f-11eb-983c-5fed770593d4.gif)
+![视频录制 120213121839558](https://user-images.githubusercontent.com/80308909/110929007-75b8a180-8362-11eb-92eb-bca5ca24dc53.gif)
+
 
 #### 4. 最后看一下运行效果：
 ![视频录制 120213121820207](https://user-images.githubusercontent.com/80308909/110926734-b9f67280-835f-11eb-8d74-56b6c3c5873c.gif)
